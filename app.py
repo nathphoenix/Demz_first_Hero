@@ -16,9 +16,9 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False #this modifies the tracker 
 app.secret_key = "Jose"
 api = Api(app)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
+# @app.before_first_request
+# def create_tables():
+#     db.create_all()
 
 # class Student(Resource):
 #   def get(self, name):
