@@ -11,7 +11,6 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
 # app.config["SQLALCHEMY_DATABSE_URI"] = "sqlite:///data.db"   #in order to loacte our db file
-                                            #we added this line below because of heroku postgress
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db')
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False #this modifies the tracker fro proper modification when changes occur and not save to alchemy
 app.secret_key = "Jose"
